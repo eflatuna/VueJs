@@ -5,6 +5,16 @@ const app = Vue.createApp({
 			website: "https://www.example.com",
 		};
 	},
+	methods: {
+		ourGoal() {
+			const randomNumber = Math.random();
+			if (randomNumber < 0.4) {
+				return "Html";
+			} else {
+				return "Css";
+			}
+		},
+	},
 });
 
 app.mount("#frontend");
