@@ -12,11 +12,11 @@
 			<h1>Frontend developer</h1>
 		</header>
 		<section id="frontend">
-			<h2>Frontend</h2>
-			<p v-html="secondGoal"></p>
-			<p v-html="ourGoal()"></p>
-			<!-- <p>{{ourGoal()}}</p> -->
-			<a v-bind:href="website">My Website</a>
+			<h2>My Information</h2>
+			<p>{{name}}</p>
+			<p>{{age}}</p>
+			<img v-bind:src="imageUrl" alt="" />
+			<input type="text" v-bind:value="name" placeholder="Name" />
 		</section>
 
 		<script src="script.js" defer></script>
