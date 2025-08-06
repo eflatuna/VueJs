@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<script src="https://unpkg.com/vue@3/dist/vue.global.js" defer></script>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<header>
+			<h1>Frontend developer</h1>
+		</header>
+		<section id="frontend">
+			<h2>Event Binding</h2>
+			<button type="button" v-on:click="add(5)">5 Arttir</button>
+			<button type="button" v-on:click="reduce(5)">5 Azalt</button>
+			<p>Sonuc:{{counter}}</p>
+			<input
+				type="text"
+				v-on:input="setName($event,'Bas')"
+				placeholder="Name"
+			/>
+			<p>Name:{{name}}</p>
+			<form v-on:submit.prevent="login">
+				<input type="text" placeholder="Name" />
+				<button type="submit">Submit</button>
+			</form>
+		</section>
+
+		<script src="script.js" defer></script>
+	</body>
+</html>
