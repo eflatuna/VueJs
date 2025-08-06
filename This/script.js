@@ -1,7 +1,8 @@
 const app = Vue.createApp({
 	data() {
 		return {
-			firstGoal: "Html",
+			firstGoal: "HTML",
+			secondGoal: "CSS",
 			website: "https://www.example.com",
 		};
 	},
@@ -9,9 +10,9 @@ const app = Vue.createApp({
 		ourGoal() {
 			const randomNumber = Math.random();
 			if (randomNumber < 0.4) {
-				return "HTML";
+				return this.firstGoal;
 			} else {
-				return "CSS";
+				return this.secondGoal;
 			}
 		},
 	},
