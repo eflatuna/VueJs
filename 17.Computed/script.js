@@ -5,13 +5,23 @@ const app = Vue.createApp({
 			name: "",
 		};
 	},
-	methods: {
-		fullName() {
+	computed: {
+		fullNameComputed() {
+			console.log("fullNameComputed called");
 			if (this.name === "") {
 				return "";
 			}
 			return this.name + " " + "Bas";
 		},
+	},
+	methods: {
+		// fullName() {
+		// 	// console.log("fullName called");
+		// 	if (this.name === "") {
+		// 		return "";
+		// 	}
+		// 	return this.name + " " + "Bas";
+		// },
 		reset() {
 			this.name = "";
 		},
