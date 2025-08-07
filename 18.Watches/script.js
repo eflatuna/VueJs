@@ -15,6 +15,11 @@ const app = Vue.createApp({
 		// 		this.fullName = this.name + " " + "Bas";
 		// 	}
 		// },
+		counter(value) {
+			if (value > 20) {
+				this.counter = 0;
+			}
+		},
 		name(value) {
 			if (value === "") {
 				this.fullName = "";
@@ -33,10 +38,11 @@ const app = Vue.createApp({
 	computed: {
 		fullNameComputed() {
 			console.log("fullNameComputed called");
-			if (this.name === "") {
+			if (this.name === "" || this.lastName === "") {
 				return "";
+			} else {
+				return this.name + " " + this.lastName;
 			}
-			return this.name + " " + "Bas";
 		},
 	},
 	methods: {
