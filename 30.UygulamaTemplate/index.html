@@ -30,9 +30,9 @@
 			</div>
 			<div class="container" v-if="winner">
 				<h2>Oyun Bitti</h2>
-				<h3>Bilgisayar kazandi!</h3>
-				<h3>Ben kazandim!</h3>
-				<h3>Berabere kaldi!</h3>
+				<h3 v-if="winner === 'computer'">Bilgisayar kazandi!</h3>
+				<h3 v-else-if="winner === 'me'">Ben kazandim!</h3>
+				<h3 v-else>Beraberlik!</h3>
 				<button>Yeni Oyun Baslat!</button>
 			</div>
 			<div class="controls" v-else>

@@ -11,7 +11,22 @@ const app = Vue.createApp({
 			currentRound: 0,
 		};
 	},
-	watch: {},
+	watch: {
+		myHealth(value) {
+			if (value <= 0 && this.computerHealth <= 0) {
+				this.winner = "draw";
+			} else if (value <= 0) {
+				this.winner = "computer";
+			}
+		},
+		computerHealth(value) {
+			if (value <= 0 && this.myHealth <= 0) {
+				this.winner = "draw";
+			} else if (value <= 0) {
+				this.winner = "me";
+			}
+		},
+	},
 	computed: {
 		computerBarStyles() {
 			if (this.computerHealth < 0) {
