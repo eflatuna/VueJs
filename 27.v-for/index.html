@@ -19,9 +19,10 @@
 			</div>
 			<p v-if="skills.length === 0">Herhangi bir sey eklemediniz!</p>
 			<ul v-else-if="skills.length > 0">
-				<li>Html</li>
+				<li v-for="(skill,index) in skills" :key="{skill}">
+					{{index+1}}.elemanim {{skill}}
+				</li>
 			</ul>
-			<!-- <p v-else></p> -->
 		</section>
 
 		<script src="script.js" defer></script>
