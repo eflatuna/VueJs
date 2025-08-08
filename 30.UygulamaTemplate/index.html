@@ -15,26 +15,28 @@
 			<div id="computer" class="container">
 				<h2>Bilgisayar</h2>
 				<div class="bar">
-					<div class="barValue"></div>
-					<p class="percentage">100%</p>
+					<div class="barValue" :style="computerBarStyles"></div>
+					<p class="percentage">
+						{{computerHealth > 0 ? computerHealth : 0}}%
+					</p>
 				</div>
 			</div>
 			<div id="me" class="container">
 				<h2>Ben</h2>
 				<div class="bar">
-					<div class="barValue"></div>
-					<p class="percentage">100%</p>
+					<div class="barValue" :style="myBarStyles"></div>
+					<p class="percentage">{{myHealth > 0 ? myHealth : 0}}%</p>
 				</div>
 			</div>
-			<div class="container">
+			<div class="container" v-if="winner">
 				<h2>Oyun Bitti</h2>
 				<h3>Bilgisayar kazandi!</h3>
 				<h3>Ben kazandim!</h3>
 				<h3>Berabere kaldi!</h3>
 				<button>Yeni Oyun Baslat!</button>
 			</div>
-			<div class="controls">
-				<button>Saldir</button>
+			<div class="controls" v-else>
+				<button @click="attackToComputer()">Saldir</button>
 				<button :disabled="true">Super Saldir</button>
 				<button>Can Ver</button>
 			</div>
