@@ -44,7 +44,11 @@ const app = Vue.createApp({
 		},
 		healMe() {
 			const healValue = getRandomValue(15, 20);
-			this.myHealth = this.myHealth + healValue;
+			if (this.myHealth + healValue > 100) {
+				this.myHealth = 100;
+			} else {
+				this.myHealth = this.myHealth + healValue;
+			}
 			this.attackMe();
 		},
 	},
