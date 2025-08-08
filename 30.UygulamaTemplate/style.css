@@ -12,3 +12,12 @@ header {
 	margin-bottom: 30px;
 	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+.container {
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	max-width: 600px;
+	width: 100%;
+	padding: 10px;
+	margin: 30px auto;
+	text-align: center;
+	border-radius: 20px;
+}
