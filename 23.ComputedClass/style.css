@@ -1,0 +1,41 @@
+header {
+	background: blueviolet;
+	color: white;
+	width: 100%;
+	max-width: 700px;
+	margin: 50px auto;
+	text-align: center;
+	padding: 15px;
+	border-radius: 15px;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#frontend {
+	max-width: 700px;
+	width: 100%;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	margin: 50px auto;
+	text-align: center;
+	border-radius: 10px;
+	padding: 15px;
+	color: darkmagenta;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#frontend h2 {
+	font-size: 30px;
+	border-bottom: 4px solid gray;
+}
+
+#frontend .box {
+	width: 150px;
+	height: 150px;
+	border: 4px dashed gray;
+	margin: 30px 0px;
+}
+
+.selected {
+	border-color: darkmagenta !important;
+}
