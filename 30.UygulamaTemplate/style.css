@@ -1,0 +1,14 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+header {
+	background-color: darkmagenta;
+	color: white;
+	padding: 20px;
+	text-align: center;
+	margin-bottom: 30px;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
