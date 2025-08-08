@@ -37,6 +37,11 @@ const app = Vue.createApp({
 			const attackValue = getRandomValue(10, 20);
 			this.myHealth = this.myHealth - attackValue;
 		},
+		specialAttack() {
+			const attackValue = getRandomValue(15, 30);
+			this.computerHealth = this.computerHealth - attackValue;
+			this.attackMe();
+		},
 	},
 });
 
