@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<script src="https://unpkg.com/vue@3/dist/vue.global.js" defer></script>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<header>
+			<h1>Frontend developer</h1>
+		</header>
+		<section id="frontend">
+			<h2>Bastan Sona</h2>
+			<div class="frontendForm">
+				<input type="text" v-model="skill" placeholder="Bir sey ekle" />
+				<button @click="addSkill()">Ekle</button>
+			</div>
+			<p v-if="skills.length === 0">Herhangi bir sey eklemediniz!</p>
+			<ul v-else-if="skills.length > 0">
+				<li
+					v-for="(skill,index) in skills"
+					:key="{skill}"
+					@click="deleteSkill(index)"
+				>
+					{{index+1}}.elemanim {{skill}}
+				</li>
+			</ul>
+		</section>
+
+		<script src="script.js" defer></script>
+	</body>
+</html>
