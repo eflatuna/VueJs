@@ -8,6 +8,7 @@ const app = Vue.createApp({
 			winner: null,
 			myHealth: 100,
 			computerHealth: 100,
+			currentRound: 0,
 		};
 	},
 	watch: {},
@@ -26,9 +27,13 @@ const app = Vue.createApp({
 				return { width: this.myHealth + "%" };
 			}
 		},
+		possibleSpecialAttack() {
+			return this.currentRound % 4 !== 0;
+		},
 	},
 	methods: {
 		attackToComputer() {
+			this.currentRound++;
 			const attackValue = getRandomValue(7, 15);
 			this.computerHealth = this.computerHealth - attackValue;
 			this.attackMe();
@@ -38,11 +43,13 @@ const app = Vue.createApp({
 			this.myHealth = this.myHealth - attackValue;
 		},
 		specialAttack() {
+			this.currentRound++;
 			const attackValue = getRandomValue(15, 30);
 			this.computerHealth = this.computerHealth - attackValue;
 			this.attackMe();
 		},
 		healMe() {
+			this.currentRound++;
 			const healValue = getRandomValue(15, 20);
 			if (this.myHealth + healValue > 100) {
 				this.myHealth = 100;

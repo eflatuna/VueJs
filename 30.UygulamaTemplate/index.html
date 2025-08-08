@@ -37,7 +37,12 @@
 			</div>
 			<div class="controls" v-else>
 				<button @click="attackToComputer()">Saldir</button>
-				<button @click="specialAttack()">Super Saldir</button>
+				<button
+					@click="specialAttack()"
+					:disabled="possibleSpecialAttack "
+				>
+					Super Saldir
+				</button>
 				<button @click="healMe()">Can Ver</button>
 			</div>
 		</section>
